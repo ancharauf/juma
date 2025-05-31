@@ -1,0 +1,87 @@
+@tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    :root {
+      --background: 240 10% 3.9%; /* Darker Slate for contrast */
+      --foreground: 0 0% 98%; /* White */
+      --card: 220 13% 12%; /* Slightly lighter dark for cards */
+      --card-foreground: 0 0% 98%; /* White */
+      --popover: 240 10% 3.9%;
+      --popover-foreground: 0 0% 98%;
+      --primary: 35 100% 58%; /* Bright Orange */
+      --primary-foreground: 240 10% 3.9%; /* Dark for text on orange */
+      --secondary: 45 100% 90%; /* Pastel Yellow */
+      --secondary-foreground: 35 100% 58%; /* Orange for text on yellow */
+      --muted: 220 9% 46%; /* Muted gray */
+      --muted-foreground: 220 9% 75%; /* Lighter muted gray */
+      --accent: 40 90% 60%; /* Slightly different orange for accents */
+      --accent-foreground: 0 0% 98%; /* White */
+      --destructive: 0 72% 51%; /* Red */
+      --destructive-foreground: 0 0% 98%; /* White */
+      --border: 220 13% 20%; /* Darker border */
+      --input: 220 13% 16%; /* Dark input background */
+      --ring: 35 100% 58%; /* Bright Orange for ring */
+      --radius: 0.75rem; /* Slightly larger radius for modern feel */
+    }
+
+    .dark {
+      --background: 240 10% 3.9%;
+      --foreground: 0 0% 98%;
+      --card: 220 13% 12%;
+      --card-foreground: 0 0% 98%;
+      --popover: 240 10% 3.9%;
+      --popover-foreground: 0 0% 98%;
+      --primary: 35 100% 58%;
+      --primary-foreground: 240 10% 3.9%;
+      --secondary: 45 100% 90%;
+      --secondary-foreground: 35 100% 58%;
+      --muted: 220 9% 46%;
+      --muted-foreground: 220 9% 75%;
+      --accent: 40 90% 60%;
+      --accent-foreground: 0 0% 98%;
+      --destructive: 0 72% 51%;
+      --destructive-foreground: 0 0% 98%;
+      --border: 220 13% 20%;
+      --input: 220 13% 16%;
+      --ring: 35 100% 58%;
+    }
+    
+    body {
+      @apply bg-background text-foreground;
+      font-family: 'Poppins', sans-serif; /* Modern, readable font */
+    }
+
+    @layer base {
+      * {
+        @apply border-border;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        @apply font-bold;
+      }
+    }
+
+    .glassmorphism-card {
+      @apply bg-card/60 backdrop-blur-xl border border-border rounded-xl shadow-2xl;
+    }
+
+    .neumorphism-button {
+      @apply bg-primary text-primary-foreground rounded-lg shadow-[5px_5px_10px_#1f2937,-5px_-5px_10px_#4b5563] hover:shadow-[inset_5px_5px_10px_#1f2937,inset_-5px_-5px_10px_#4b5563] transition-all duration-300 ease-in-out;
+    }
+    
+    .gradient-text {
+      @apply bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent;
+    }
+
+    .friendly-button {
+      @apply bg-gradient-to-r from-orange-500 to-amber-500 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-400;
+    }
+
+    .input-modern {
+      @apply bg-input border-border text-foreground placeholder-muted-foreground rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary transition-colors duration-200;
+    }
+
+    .card-cheerful {
+      @apply bg-gradient-to-br from-card via-background to-card/70 border-border rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl;
+    }
+  
