@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import supabase from '@/lib/supabase'
 
-const SupabaseTestDebug = () => {
+const SupabaseTest = () => {
   const [result, setResult] = useState(null)
   const [env, setEnv] = useState({ url: '', key: '' })
   const [loading, setLoading] = useState(true)
