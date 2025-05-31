@@ -8,10 +8,9 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "npx vite build",
+    "build": "echo 'Handled by vercel.json'",
     "preview": "vite preview",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "postinstall": "echo 'Postinstall script executed'"
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "^1.2.1",
